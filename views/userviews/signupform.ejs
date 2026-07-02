@@ -1,0 +1,36 @@
+<% layout("layouts/boilerplate") -%>
+<h1 class=" text-center text-white">User Registration</h1>
+    <form class="row g-3 w-50 my-3 mx-auto needs-validation border border-2 border-white p-3 rounded-3" novalidate action="http://localhost:8080/api/sms/user/signup" method="POST">
+        <div class="col-md-6">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Ketan kumar" name="user[username]" required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="ketan123" name="user[password]" required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="ketan123@gmail.com" name="user[email]"  required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="usercode" class="form-label">Usercode</label>
+            <input type="text" class="form-control" id="usercode" placeholder="student123" name="user[usercode]">
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white" >
+                This is Optional!
+            </div>
+        </div>
+      
+        <div class="col-12">
+            <button class="btn btn-dark" type="submit">signup</button>
+        </div>
+    </form>

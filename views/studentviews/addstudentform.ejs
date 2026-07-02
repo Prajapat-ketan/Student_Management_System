@@ -1,0 +1,36 @@
+<% layout("layouts/boilerplate") -%>
+    <h1 class=" text-center text-white">Add Student</h1>
+    <form class="row g-3 w-50 my-3 mx-auto needs-validation border border-2 border-white p-3 rounded-3" novalidate action="http://localhost:8080/api/sms/student" method="POST">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Ketan kumar" name="student[name]" required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="ketan@gmail.com" name="student[email]" required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="course" class="form-label">Course</label>
+            <input type="text" class="form-control" id="course" placeholder="BCA" name="student[course]"  required>
+            <div class="valid-feedback bg-dark p-1 rounded-2 text-white">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="number" placeholder="22" name="student[age]" min="16" required>
+            <div class="invalid-feedback bg-dark p-1 rounded">
+                Please Enter Correct Age!
+            </div>
+        </div>
+      
+        <div class="col-12">
+            <button class="btn btn-dark" type="submit">Add</button>
+        </div>
+    </form>

@@ -1,0 +1,22 @@
+<% layout("layouts/boilerplate") -%>
+ <h1 class="bg-primary text-center text-white">Student Full Details</h1>
+ <div class="card mx-auto my-3" style="width: 25rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= student.name %></h5>
+    <p class="card-text"><%= student.email %></p>
+    <p class="card-text"><%= student.course %></p>
+    <p class="card-text"><%= student.age %></p>
+    <div class="d-flex" >
+    <% if(user.role === "admin"||user.role==="employee"){ %>
+         <a href="http://localhost:8080/api/sms/student/<%= student._id %>/editform" class="btn btn-primary me-3">Edit</a>
+    <% } %>
+
+    <% if(user.role==="admin" ){ %>
+     <form action="http://localhost:8080/api/sms/student/<%= student._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-primary">Delete</button>
+    </form>
+    <% } %>
+    
+    </div>
+  </div>
+ </div>
